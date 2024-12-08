@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using UnityEngine;
 
-namespace _Packages.RD_Save.Runtime
+namespace RD_Save.Runtime
 {
     public class SaveSystem
     {
@@ -23,11 +23,9 @@ namespace _Packages.RD_Save.Runtime
             {
                 Directory.CreateDirectory(directory);
             }
-            
-            using (var stream = File.Open(_savePath, FileMode.Create))
-            {
-                _serializer.Serialize(data, stream);
-            }
+
+            using var stream = File.Open(_savePath, FileMode.Create);
+            _serializer.Serialize(data, stream);
         }
 
         public T Load<T>() 
@@ -38,10 +36,8 @@ namespace _Packages.RD_Save.Runtime
                 return default(T);
             }
 
-            using (var stream = File.OpenRead(_savePath))
-            {
-                return _serializer.Deserialize<T>(stream);
-            }
+            using var stream = File.OpenRead(_savePath);
+            return _serializer.Deserialize<T>(stream);
         }
     }
 }

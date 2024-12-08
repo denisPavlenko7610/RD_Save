@@ -1,10 +1,9 @@
-﻿using System;
-using System.Globalization;
+﻿using System.Globalization;
 using System.IO;
 using Unity.Plastic.Newtonsoft.Json;
 using UnityEngine;
 
-namespace _Packages.RD_Save.Runtime
+namespace RD_Save.Runtime
 {
     public class JsonSerializer : IDataSerializer
     {

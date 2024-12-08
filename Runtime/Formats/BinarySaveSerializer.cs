@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace _Packages.RD_Save.Runtime
+namespace RD_Save.Runtime
 {
     public class BinarySaveSerializer : IDataSerializer
     {
