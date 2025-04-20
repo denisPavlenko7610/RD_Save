@@ -5,3 +5,5 @@ https://github.com/denisPavlenko7610/RDTools
 
 Look how to use in example - https://github.com/denisPavlenko7610/LikeAGTA_unity
 
+install newtonsoft - com.unity.nuget.newtonsoft-json
+
